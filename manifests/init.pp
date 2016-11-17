@@ -80,9 +80,13 @@ class vault (
   $extra_config        = {},
 ) inherits ::vault::params {
 
-  validate_hash($backend)
+  
   validate_hash($listener)
   validate_hash($extra_config)
+  
+  if $backend {
+    validate_hash($backend)
+  }
 
   if $ha_backend {
     validate_hash($ha_backend)

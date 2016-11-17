@@ -23,7 +23,7 @@ class vault::params {
 
   # backend and listener are mandatory, we provide some sensible
   # defaults here
-  $backend             = { 'file' => { 'path' => '/var/lib/vault' }}
+  #$backend             = { 'file' => { 'path' => '/var/lib/vault' }}
   $manage_backend_dir  = false
   $listener            = {
     'tcp' => {
